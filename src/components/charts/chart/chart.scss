@@ -1,0 +1,11 @@
+@import '../../../../style.scss';
+.chart {
+    @include themify() {
+        margin: 20px;
+        padding: 20px;
+        
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+}

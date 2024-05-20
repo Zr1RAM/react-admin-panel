@@ -1,0 +1,83 @@
+@import '../../../style.scss';
+.newUser {
+    @include themify() {
+        .userForm {
+            display: flex;
+            flex-wrap: wrap;
+            .userItem {
+                width: 400px;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                margin-right: 20px;
+                label {
+                    margin-bottom: 10px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: themed("textColorSoft");
+                }
+                input {
+                    height: 20px;
+                }
+
+                textarea {
+                    resize: none;
+                }
+
+                input, textarea {
+                    padding: 10px;
+                    border: 1px solid themed("boxShadow");
+                    border-radius: 5px;
+                    background-color: themed("onHover");
+                    color: themed("textColor");
+                }
+
+                input::placeholder, textarea::placeholder {
+                    color: themed("textColorSoft");
+                }
+
+                .userGender {
+                    display: flex;
+                    input {
+                        margin-top: 15px;
+                    }
+                    label {
+                        margin: 10px;
+                        font-size: 18px;
+                        color: themed("textColor");
+                    }
+                }
+
+                select {
+                    height: 40px;
+                    border-radius: 5px;
+                    background-color: themed("onHover");
+                    color: themed("textColor");
+                    padding: 5px;
+                    // appearance: none;
+                    // -webkit-appearance: none;
+                    // -moz-appearance: none;
+                }
+
+                // option:hover {
+                //     background: themed("logo");
+                // }
+
+                
+
+            }
+
+            button {
+                width: 200px;
+                border: none;
+                border-radius: 15px;
+                background-color: themed("logo");
+                color: white;
+                padding: 7px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-top: 20px;
+            }
+        }
+    }
+}

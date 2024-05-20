@@ -1,0 +1,52 @@
+@import '../../../style.scss';
+.userList {
+    padding: 20px;
+    @include themify() {
+        .data-table {
+            color: themed("textColor");
+            .userItem {
+                display: flex;
+                align-items: center; 
+                img {
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-right: 10px;
+                }
+            }
+            .editButton {
+                border: none;
+                border-radius: 10px;
+                padding: 5px 10px;
+                background-color: themed("onHover");
+                color: themed("textColor");
+                cursor: pointer;
+                margin-right: 20px;
+            }
+            .deleteIcon {
+                color: red;
+                cursor: pointer;
+            }
+
+            .status {
+                padding: 5px;
+                border: none;
+                border-radius: 10px;
+            }
+
+            .Active {
+                // background-color: #a7f3d6;
+                color: green;
+            }
+            .Deactivated {
+                // background-color: #fcbabe;
+                color: red;
+            }
+            .Pending {
+                // background-color: #ffbd91;
+                color: orange;
+            }
+        }
+    }
+}

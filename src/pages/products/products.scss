@@ -1,0 +1,37 @@
+@import '../../../style.scss';
+.products {
+    @include themify() {
+        .data-table {
+            color: themed("textColor");
+
+            .listItem {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                img {
+                    width: 45px;
+                    height: 45px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+
+            .editButton {
+                border: none;
+                border-radius: 10px;
+                padding: 5px 10px;
+                background-color: themed("onHover");
+                color: themed("textColor");
+                cursor: pointer;
+                margin-right: 20px;
+            }
+
+            .deleteIcon {
+                color: red;
+                cursor: pointer;
+            }
+
+        }
+    }
+}

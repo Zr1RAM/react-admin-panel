@@ -1,0 +1,93 @@
+@import '../../../style.scss';
+.newProduct {
+    @include themify() {
+        padding: 20px;
+        margin: 10px;
+        -webkit-box-shadow: 0px 0px 11px 1px themed("boxShadow"); 
+        box-shadow: 0px 0px 11px 1px themed("boxShadow");
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        form {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+
+            .formLeft {
+                .addProductItem {
+                    width: 250px;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+    
+                    input {
+                        margin-bottom: 10px;
+                            border: none;
+                            border-bottom: 1px solid themed("boxShadow");
+                            background: none;
+                            color: themed("textColor");
+                    }
+                    input::placeholder {
+                        color: themed("inputPlaceHolder");
+                    }
+
+                    select {
+                        margin-bottom: 10px;
+                        border-radius: 10px;
+                        padding: 2px;
+                        color: themed("textColor");
+                        background-color: themed("onHover");
+                    }
+                }
+            }
+
+            .formRight {
+                .addProductImage {
+                    display: flex;
+                    flex-direction: column;
+
+                    img {
+                        width: 125px;
+                        height: 125px;
+                        border-radius: 10px;
+                        object-fit: cover;
+                        margin-bottom: 10px;
+                    }
+
+                    .chooseImgLabel {
+                        border: none;
+                        border-radius: 5px;
+                        color: white;
+                        padding: 5px;
+                        font-weight: bold;
+                        background-color: themed("logo");
+                        cursor: pointer;
+                    }
+
+
+
+                }
+            }
+
+            label {
+                color: themed("textColorSoft");
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        button {
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            font-weight: bold;
+            background-color: themed("logo");
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@import '../../../../style.scss';
+.widgetLg {
+    @include themify() {
+        flex: 2;
+        -webkit-box-shadow: 0px 0px 11px 1px themed("boxShadow"); 
+        box-shadow: 0px 0px 11px 1px themed("boxShadow");
+        padding: 20px;
+        border-radius: 10px;
+        .title {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-spacing: 20px;
+
+            th {
+                text-align: left;
+            }
+
+            .user {
+                display: flex;
+                align-items: center;
+                font-weight: 600;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-right: 10px;
+                }
+            }
+
+            .date, .amount {
+                font-weight: 300;
+            }
+
+            .lgButton {
+                padding: 5px 7px;
+                border: none;
+                border-radius: 10px;
+            }
+            .Approved {
+                background-color: #a7f3d6;
+                color: #2e865c;
+            }
+            .Declined {
+                background-color: #fcbabe;
+                color: #d95087;
+            }
+            .Pending {
+                background-color: #ffbd91;
+                color: #8f562f;
+            }
+        }
+        
+    }
+
+    
+}
+

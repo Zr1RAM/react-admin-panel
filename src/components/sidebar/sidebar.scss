@@ -1,0 +1,43 @@
+@import "../../../style.scss";
+
+.sidebar {
+    @include themify() {
+        flex: 1;
+        height: calc(100vh - 50px);
+        background-color: themed("bg");
+        color: themed("textColorSoft");
+        position: sticky;
+        top: 50px;
+        .sidebarwrapper {
+            padding: 20px;
+
+            .sidebarmenu {
+                margin-bottom: 10px;
+                .title {
+                    font-size: 13px;
+                    
+                }
+                .sidebarlist {
+                    list-style: none;
+                    padding: 5px;
+                    .item {
+                        padding: 5px;
+                        cursor: pointer;
+                        display: flex;
+                        border-radius: 10px;
+                        
+                        .sidebarIcon {
+                            margin-right: 5px;
+                            // font-size: 20px !important;
+                        }
+
+                        &:active, &:hover {
+                            background-color: themed("onHover");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
