@@ -4,7 +4,7 @@
     }
 
     .page {
-        flex: 4;
+        flex: 6;
         @include themify() {
             background-color: themed("bg");
             color: themed("textColor");

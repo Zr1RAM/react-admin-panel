@@ -122,15 +122,17 @@ const Chart = ({title, data, dataKeys, axis, grid}) => {
                         <YAxis domain={[0,10000]} stroke='#5550bd'/>
                     </>
                 }
-                {dataKeys ? dataKeys.map((dataKey) => {
-                    return (<>
+                {dataKeys ? dataKeys.map((dataKey, index) => {
+                    //console.log(index);
+                    return (
                         <Line 
+                            key={index}
                             type="monotone" 
                             dataKey={dataKey.dataKeyName} 
                             stroke={dataKey.stroke} 
                             activeDot={{ /*fill: 'red',*/ r: 8 }}
-                            />
-                    </>);
+                        />
+                    );
                 })
                     : <>
                         <Line type="monotone" dataKey="Active Users" stroke="#8884d8" activeDot={{ /*fill: 'red',*/ r: 8 }}/>

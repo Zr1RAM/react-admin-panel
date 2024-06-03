@@ -8,11 +8,12 @@ import {
     WorkOutline, 
     PermIdentity,
     Storefront,
-    AttachMoney,
     BarChart,
     MailOutline,
     DynamicFeed,
-    ChatBubbleOutline
+    ChatBubbleOutline,
+    PlayCircleOutline,
+    List
 } from '@material-ui/icons'
 
 const Sidebar = () => {
@@ -49,14 +50,26 @@ const Sidebar = () => {
                     </Link>
                     <Link to="/products" className='link'>
                         <li className="item">
-                            <Storefront className='sidebarIcon'/>
-                            Products
+                            <div 
+                                style={
+                                    {
+                                        display: "flex",
+                                        alignItems: "center",
+                                    }
+                                }
+                            >
+                                <Storefront/>
+                                <span>/</span>
+                                <PlayCircleOutline style={{ marginRight: '5px' }}/></div>
+                            Products (Movies)
                         </li>   
                     </Link>
-                    <li className="item">
-                        <AttachMoney className='sidebarIcon'/>
-                        Transactions
-                    </li>
+                    <Link to="/lists" className='link'>
+                        <li className="item">
+                            <List className='sidebarIcon'/>
+                            Lists
+                        </li>
+                    </Link>
                     <li className="item">
                         <BarChart className='sidebarIcon'/>
                         Reports

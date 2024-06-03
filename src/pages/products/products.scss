@@ -17,6 +17,11 @@
                 }
             }
 
+            .genre {
+                word-wrap: break-word; 
+                word-break: break-all;
+            }
+
             .editButton {
                 border: none;
                 border-radius: 10px;

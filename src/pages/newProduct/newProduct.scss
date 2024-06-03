@@ -23,15 +23,22 @@
                     flex-direction: column;
                     margin-bottom: 10px;
     
-                    input {
-                        margin-bottom: 10px;
+                    input, textarea {
+                            margin-bottom: 10px;
                             border: none;
                             border-bottom: 1px solid themed("boxShadow");
                             background: none;
                             color: themed("textColor");
                     }
-                    input::placeholder {
+                    input::placeholder, textarea::placeholder {
                         color: themed("inputPlaceHolder");
+                    }
+
+                    textarea::-webkit-scrollbar {
+                        width: 0px;
+                        background: transparent;
+                        scrollbar-width: none;
+                        -ms-overflow-style: none;
                     }
 
                     select {
